@@ -4,8 +4,29 @@
 
 1. Buat database dengan impor `database/manstudy.sql` melalui phpMyAdmin.
 2. Sesuaikan kredensial MySQL di `application/config/database.php`.
-3. Buka `http://localhost/ManStudy/`. Akun awal: `admin` / `password` (segera ganti di produksi).
+3. Buka `http://localhost/ManStudy/`.
 4. Pastikan folder `uploads/legalisir` dapat ditulis web server.
+
+---
+
+## 🔑 Akun & Kredensial Login
+
+Berikut adalah akun yang sudah tersedia untuk pengujian sistem:
+
+| Peran (Role) | Email / Username / NISN | Password | Keterangan |
+| :--- | :--- | :--- | :--- |
+| **Super Admin** | `admin` *(atau `admin@man1magelang.sch.id`)* | `Admin123!` | Akses penuh seluruh modul & master data |
+| **Tata Usaha (Admin Biasa)** | `Admin_Biasa` *(atau `Admin_Biasa@gmail.com`)* | `admin123` | Akses verifikasi alumni, legalisir & tracer |
+| **Tata Usaha 2** | `zidan` *(atau `zidan@gmail.com`)* | `zidan123` | Akses tata usaha operasional |
+| **Kepala Madrasah** | `kepalasekolah` *(atau `kepalasekolah@gmail.com`)* | `kepalasekolah` | Akses monitoring & pembacaan laporan |
+| **Siswa / Alumni (Demo)** | `87612451` | `87612451` | NISN terdaftar (password default = NISN) |
+
+> 💡 **Catatan untuk Login Siswa / Alumni:**
+> - **Akun Demo Lainnya:** Siswa demo lainnya di database menggunakan **Username = Nomor NISN** dan **Password = Nomor NISN** (Contoh: `87621934` / `87621934`, `87634178` / `87634178`).
+> - **Registrasi Mandiri:** Siswa baru dapat mendaftar mandiri melalui menu registrasi (`/register`). Setelah diverifikasi oleh Admin/TU di menu Data Alumni, siswa dapat login dengan email/NISN dan password yang mereka buat sendiri.
+> - **Dibuatkan oleh Admin/TU:** Admin dapat menambahkan siswa via menu *Data Alumni* -> *Tambah Data* (password awal akan dibuat otomatis dan ditampilkan di notifikasi).
+
+---
 
 ## Analisis & sitemap
 
